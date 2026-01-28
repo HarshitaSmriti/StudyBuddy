@@ -5,7 +5,7 @@ import Dashboard from "./components/dashboard/Dashboard";
 import UserSetup from "./components/user/UserSetup";
 // Fixed import path: assuming src/task/TasksPage.jsx
 import TasksPage from "./components/task/TaskPage";
-
+import NotesPage from "./components/notes/NotesPage";
 function App() {
   const [userName, setUserName] = useState(
     localStorage.getItem("userName")
@@ -42,7 +42,8 @@ function App() {
           {/* Conditional Rendering Logic */}
           {currentPage === "dashboard" && <Dashboard userName={userName} />}
           {currentPage === "tasks" && <TasksPage />}
-        </main>
+          {currentPage === "notes" && <NotesPage/>}
+          </main>
       </div>
     </div>
   );
